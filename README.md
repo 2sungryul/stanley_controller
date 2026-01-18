@@ -51,7 +51,7 @@ Stanley 알고리즘은 2005년 DARPA Grand Challenge에서 Stanford 대학팀�
 ## 빌드 방법
 
 ```bash
-cd ~/turtle_tracker_ws
+cd ~/turtle_visualizer_ws
 colcon build --packages-select stanley_controller
 source install/setup.bash
 ```
@@ -68,7 +68,7 @@ ros2 launch stanley_controller full_system.launch.py
 - turtlesim_node
 - circular_path_publisher_node
 - stanley_controller_node
-- turtle_tracker_node
+- turtle_visualizer_node
 
 ### 방법 2: 개별 실행
 
@@ -82,8 +82,8 @@ ros2 run path_publisher circular_path_publisher_node
 # 터미널 3: stanley controller
 ros2 run stanley_controller stanley_controller_node
 
-# 터미널 4: tracker (시각화)
-ros2 run turtle_tracker turtle_tracker_node
+# 터미널 4: visualizer (시각화)
+ros2 run turtle_visualizer turtle_visualizer_node
 ```
 
 ### 방법 3: 커스텀 파라미터로 실행
