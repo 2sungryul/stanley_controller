@@ -38,6 +38,17 @@ ament_target_dependencies(lane_change_stanley_controller_node
   tf2_geometry_msgs
 )
 
+# Lane_change_stanley_controller_node executable
+add_executable(overtaking_stanley_controller_node src/overtaking_stanley_controller_node.cpp)
+ament_target_dependencies(overtaking_stanley_controller_node
+  rclcpp 
+  turtlesim
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_geometry_msgs
+)
+
 install(TARGETS
   stanley_controller_node
   DESTINATION lib/${PROJECT_NAME}
@@ -45,6 +56,11 @@ install(TARGETS
 
 install(TARGETS
   lane_change_stanley_controller_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(TARGETS
+  overtaking_stanley_controller_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
